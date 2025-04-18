@@ -17,11 +17,6 @@ namespace MABEL_BHI_LITE
 	{
 
 		/**
-		 * @var Language_Manager language manager.
-		 */
-		protected $language_manager;
-
-		/**
 		 * Business_Hours_Indicator constructor.
 		 *
 		 * @param $dir string
@@ -38,8 +33,6 @@ namespace MABEL_BHI_LITE
 
 		public function run()
 		{
-			// Init translations.
-			$this->language_manager = new Language_Manager();
 
 			// Init settings with defaults.
 			Settings_Manager::init( [

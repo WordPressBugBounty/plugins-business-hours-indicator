@@ -20,7 +20,7 @@ namespace MABEL_BHI_LITE\Core{
 			$this->view = $view;
 			$this->data_loader = $data_loader;
 
-			add_shortcode($shortcode_tag, [ $this, 'render_shortcode'] );
+			add_shortcode( $shortcode_tag, [ $this, 'render_shortcode'] );
 		}
 
 		public function render_shortcode($attributes, $content, $code)

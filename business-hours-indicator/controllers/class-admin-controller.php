@@ -17,21 +17,31 @@ namespace MABEL_BHI_LITE\Controllers
 		private $slug;
 		public function __construct()
 		{
-			parent::__construct(new Options_Manager());
+			parent::__construct( new Options_Manager() );
 			$this->slug = Config_Manager::$slug;
 
 			$this->add_script_dependencies( ['underscore'] );
 
 			$this->add_script_variable('clamp', 3);
 
-			$this->init_admin_page();
+			add_action( 'admin_init', [ $this, 'init_admin_page' ] );
+
+			$this->loader->add_action(Config_Manager::$slug . '-add-section-content-codes',$this,'codes_content');
+
+			$this->loader->add_action(Config_Manager::$slug . '-add-content', $this , 'underscore_templates');
+
+			$this->loader->add_action(Config_Manager::$slug . '-render-sidebar', $this,'render_main_sidebar');
+
+			$this->loader->add_action(Config_Manager::$slug . '-render-sidebar-indicator', $this,'render_indicator_sidebar');
+
+			$this->loader->add_action(Config_Manager::$slug . '-render-sidebar-table', $this,'render_list_sidebar');
+
 
 			$this->add_ajax_function('mb-bhi-update-indicator',$this,'update_indicator',false,true);
 			$this->add_ajax_function('mb-bhi-update-list',$this,'update_list',false, true);
 		}
 
-		public function update_list()
-		{
+		public function update_list() {
 			echo do_shortcode('[mbhi_hours]');
 			wp_die();
 		}
@@ -42,7 +52,7 @@ namespace MABEL_BHI_LITE\Controllers
 			wp_die();
 		}
 
-		private function init_admin_page()
+		public function init_admin_page()
 		{
 			$this->options_manager->add_section('general', __('General','business-hours-indicator'), 'admin-tools', true);
 			$this->options_manager->add_section('hours', __('Hours','business-hours-indicator'), 'clock');
@@ -194,17 +204,7 @@ namespace MABEL_BHI_LITE\Controllers
 				Settings_Manager::get_setting('includevacations')
 			);
 
-			$this->loader->add_action(Config_Manager::$slug . '-add-section-content-codes',$this,'codes_content');
-
-			$this->loader->add_action(Config_Manager::$slug . '-add-content', $this , 'underscore_templates');
-
-			$this->loader->add_action(Config_Manager::$slug . '-render-sidebar', $this,'render_main_sidebar');
-
-			$this->loader->add_action(Config_Manager::$slug . '-render-sidebar-indicator', $this,'render_indicator_sidebar');
-
-			$this->loader->add_action(Config_Manager::$slug . '-render-sidebar-table', $this,'render_list_sidebar');
-
-		}
+					}
 
 		public function render_list_sidebar()
 		{

@@ -3,7 +3,7 @@
 	/** @var \MABEL_BHI_LITE\Models\List_VM $model */
 
 	include_once '_helpers.php';
-
+	
 	if($model->show_location_error) {
 		echo '<span>' . __( "No location found for this name. Either review your location name or go to Settings > Business Hours Indicator to set up locations.", 'business-hours-indicator' ) . '</span>';
 		return;

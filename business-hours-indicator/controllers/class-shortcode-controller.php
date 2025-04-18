@@ -28,10 +28,14 @@ namespace MABEL_BHI_LITE\Controllers
 		public function __construct()
 		{
 			$this->slug = Config_Manager::$slug;
-			$this->init_hours_list_shortcode();
-			$this->init_isopenclosed_shortcodes();
-			$this->init_indicator_shortcode();
-		}
+
+						add_action( 'init', function() {
+				$this->init_hours_list_shortcode();
+				$this->init_isopenclosed_shortcodes();
+				$this->init_indicator_shortcode();
+			});
+
+					}
 
 		#region Indicator Shortcode
 		private function init_indicator_shortcode()
@@ -167,6 +171,7 @@ namespace MABEL_BHI_LITE\Controllers
 
 			$consolidated = $attributes['display'] == 1 || strtolower($attributes['display']) === 'consolidated';
 			$model->consolidate = $consolidated;
+
 			$model->normal_entries = $consolidated ?
 				$this->sets_as_consolidated_output($location->opening_hours, $format) :
 				$this->sets_as_output($location->opening_hours, $format);
@@ -271,6 +276,7 @@ namespace MABEL_BHI_LITE\Controllers
 		private function sets_as_output(array $sets, $time_format)
 		{
 			$entries = [];
+
 			foreach($sets as $set)
 			{
 				$entry = new List_VM_Entry();

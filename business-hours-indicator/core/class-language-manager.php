@@ -11,13 +11,12 @@ namespace MABEL_BHI_LITE\Core
 
 		public function __construct()
 		{
-			Registry::get_loader()->add_action('plugins_loaded', $this, 'load_text_domain');
 		}
 
 		public function load_text_domain()
 		{
 			load_plugin_textdomain(
-				Config_Manager::$slug,
+				'business-hours-indicator',
 				false,
 				plugin_basename(Config_Manager::$slug) .'/'. $this->language_folder . '/'
 			);
