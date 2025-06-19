@@ -3,8 +3,8 @@ Contributors: maartenbelmans, studiowombat
 Donate link: https://www.paypal.me/maartenbelmans
 Tags: business hours, opening times, opening hours, open indication, currently open
 Requires at least: 3.7
-Tested up to: 6.8
-Stable tag: 2.4.3
+Tested up to: 6.8.1
+Stable tag: 2.4.4
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,10 +13,10 @@ Display opening hours and if you're currently open/closed, with countdown to nex
 
 == Description ==
 
-* Highly customizable shortcodes to display your opening times in any format
-* Shortcodes to indicate if you are currently open or closed
+* Use Blocks or shortcodes to display your opening times in any format anywhere on your website
+* Shortcodes & block to indicate if you are currently open or closed
 * Alternate message when you're almost opening or closing
-* Shortcodes to display something only when you are open or closed
+* Shortcodes or block to display something only when you are open or closed
 * Easily style everything
 * 4 widgets (does the same as the shortcodes)
 * Supports Vacations
@@ -151,6 +151,10 @@ find all classes [here](https://www.studiowombat.com/knowledge-base/styling-the-
 
 == Changelog ==
 
+= version 2.4.4 =
+ * New: 4 blocks for Block themes.
+ * Improvement: improved documentation page in the admin screen.
+ 
 = version 2.4.3 =
  * Fix: fixed translation issues with WordPress version 6.8+.
  

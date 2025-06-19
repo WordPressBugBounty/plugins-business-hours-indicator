@@ -1,4 +1,33 @@
+<h3>
+	<?php _e( 'How to use this plugin?', 'mabel-business-hours-indicator' ) ?>
+</h3>
+
+<p>
+	<?php _e( 'There are 3 ways you can include this plugin to your website: ', 'mabel-business-hours-indicator' ); ?>
+</p>
+<ul style="list-style:disc;margin-left:20px;">
+    <li><?php _e('If you\'re using a <a href="https://wordpress.org/documentation/article/block-themes/" target="_blank">WordPress Block Theme</a>, our plugin includes 4 Blocks you can add anywhere that supports it.', 'mabel-business-hours-indicator' ) ?></li>
+    <li><?php _e('Via <a href="https://codex.wordpress.org/Shortcode" target="_blank">Shortcodes</a>.', 'mabel-business-hours-indicator' ) ?></li>
+    <li><?php _e('Via PHP code (only recommended if you\'re using a custom theme).', 'mabel-business-hours-indicator' ) ?></li>
+</ul>
+
 <table class="form-table">
+    <tr>
+        <th><?php _e('Blocks','business-hours-indicator'); ?></th>
+        <td>
+            <code>
+                [BHI] opening hours overview<br/>
+                [BHI] opening hours indicator<br/>
+                [BHI] Show only when open<br/>
+                [BHI] Show only when closed
+            </code>
+            <div class="p-t-2">
+				<span class="extra-info">
+					<?php _e('There are 4 different blocks available. You can use them anywhere in your site that supports the new WordPress Block system.','business-hours-indicator');?>.
+				</span>
+            </div>
+        </td>
+    </tr>
 	<tr>
 		<th><?php _e('Indicator shortcode','business-hours-indicator'); ?></th>
 		<td>

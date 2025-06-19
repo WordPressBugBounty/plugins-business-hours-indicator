@@ -58,7 +58,7 @@ namespace MABEL_BHI_LITE\Controllers
 			$this->options_manager->add_section('hours', __('Hours','business-hours-indicator'), 'clock');
 			$this->options_manager->add_section('indicator', __('Indicator','business-hours-indicator'), 'arrow-down-alt');
 			$this->options_manager->add_section('table', __('Table','business-hours-indicator'), 'editor-table');
-			$this->options_manager->add_section('codes', __('Codes','business-hours-indicator'),'editor-code');
+			$this->options_manager->add_section('codes', __('Info','business-hours-indicator'),'info-outline');
 
 			$timezones = DateTimeZone::listIdentifiers(DateTimeZone::ALL);
 			$locations = Settings_Manager::get_setting('locations');

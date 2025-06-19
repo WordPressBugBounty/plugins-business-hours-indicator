@@ -3,13 +3,13 @@
 namespace MABEL_BHI_LITE
 {
 
-	if(!defined('ABSPATH')){die;}
+	if( ! defined( 'ABSPATH' ) ){ die; }
 
 	use MABEL_BHI_LITE\Controllers\Admin_Controller;
+	use MABEL_BHI_LITE\Controllers\Block_Controller;
 	use MABEL_BHI_LITE\Controllers\Shortcode_Controller;
 	use MABEL_BHI_LITE\Controllers\Widgets_Controller;
 	use MABEL_BHI_LITE\Core\Config_Manager;
-	use MABEL_BHI_LITE\Core\Language_Manager;
 	use MABEL_BHI_LITE\Core\Registry;
 	use MABEL_BHI_LITE\Core\Settings_Manager;
 
@@ -61,9 +61,13 @@ namespace MABEL_BHI_LITE
 
 			// Widgets
 			new Widgets_Controller();
+			
+			// Blocks
+			new Block_Controller();
 
 			// Kick off!
 			Registry::get_loader()->run();
+			
 		}
 
 	}
