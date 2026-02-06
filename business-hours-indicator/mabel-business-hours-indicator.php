@@ -3,7 +3,7 @@
  * Plugin Name: Business Hours Indicator
  * Plugin URI: https://www.studiowombat.com/plugin/business-hours-indicator//?utm_source=bhifree&utm_medium=plugin&utm_campaign=plugins
  * Description: Add an indication of being currently open or closed. Show business hour tables. Conditional logic: show/hide content only when open/closed.
- * Version: 2.4.4
+ * Version: 2.4.5
  * Author: StudioWombat
  * Author URI: https://www.studiowombat.com/?utm_source=bhifree&utm_medium=plugin&utm_campaign=plugins
  * Text Domain: business-hours-indicator
@@ -59,7 +59,7 @@ function run_mabel_bhi_lite() {
 		plugin_dir_url( __FILE__ ),
 		plugin_basename( __FILE__ ),
 		'Business Hours Indicator',
-		'2.4.4'
+		'2.4.5'
 	);
 
 	$plugin->run();

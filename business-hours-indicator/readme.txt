@@ -3,8 +3,8 @@ Contributors: maartenbelmans, studiowombat
 Donate link: https://www.paypal.me/maartenbelmans
 Tags: business hours, opening times, opening hours, open indication, currently open
 Requires at least: 3.7
-Tested up to: 6.8.1
-Stable tag: 2.4.4
+Tested up to: 6.8.3
+Stable tag: 2.4.5
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -151,6 +151,9 @@ find all classes [here](https://www.studiowombat.com/knowledge-base/styling-the-
 
 == Changelog ==
 
+= version 2.4.5 =
+ * Fix: fixed a PHP error when the premium version is also active.
+ 
 = version 2.4.4 =
  * New: 4 blocks for Block themes.
  * Improvement: improved documentation page in the admin screen.
